@@ -1,4 +1,4 @@
-# 1cak-spa-vuejs
+# Single Page Application 1Cak Unofficial
 #How to install 
 git clone [this repository]
 
