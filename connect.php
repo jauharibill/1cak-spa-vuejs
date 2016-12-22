@@ -1,5 +1,7 @@
 <?php 
 
+header("Access-Control-Allow-Origin : * ");
+
 if (isset($_GET['section'])) {
 	$section = $_GET['section'];
 	$data = file_get_contents('http://api-1cak.herokuapp.com/'.$section);

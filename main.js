@@ -6,7 +6,8 @@ var vm = new Vue({
       load:true,
       next:"",
       busy:true,
-      keyword:""
+      keyword:"",
+      host:"http://bill.hol.es/project/1cak/", //this belongs your host
   },
   beforeCompile: function () {
     this.load = true;
@@ -16,7 +17,7 @@ var vm = new Vue({
   methods:{
     search:function(){
       this.load = true;
-          this.$http.get('/connect.php?search='+this.keyword).then((response)=>{
+          this.$http.get(this.host+'connect.php?search='+this.keyword).then((response)=>{
             console.log(JSON.parse(response.body));
 
             trolldata = JSON.parse(response.body);
@@ -43,7 +44,7 @@ var vm = new Vue({
       var section = this.section;
       var next = this.next;
 
-          vm.$http.get('/connect.php?param='+section+'&next='+next).then((response)=>{
+          vm.$http.get(this.host+'connect.php?param='+section+'&next='+next).then((response)=>{
 
             trolldata = JSON.parse(response.body);
             page = trolldata.page;
@@ -68,7 +69,7 @@ var vm = new Vue({
       this.getData();
     },
     getData:function(){
-          this.$http.get('/connect.php?section='+this.section).then((response)=>{
+          this.$http.get(this.host+'connect.php?section='+this.section).then((response)=>{
             console.log(JSON.parse(response.body));
 
             trolldata = JSON.parse(response.body);
