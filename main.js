@@ -17,7 +17,7 @@ var vm = new Vue({
   methods:{
     search:function(){
       this.load = true;
-          this.$http.get(this.host+'connect.php?search='+this.keyword).then((response)=>{
+          this.$http.get("http:"+this.host+'connect.php?search='+this.keyword).then((response)=>{
             console.log(JSON.parse(response.body));
 
             trolldata = JSON.parse(response.body);
@@ -44,7 +44,7 @@ var vm = new Vue({
       var section = this.section;
       var next = this.next;
 
-          vm.$http.get(this.host+'connect.php?param='+section+'&next='+next).then((response)=>{
+          vm.$http.get("http:"+this.host+'connect.php?param='+section+'&next='+next).then((response)=>{
 
             trolldata = JSON.parse(response.body);
             page = trolldata.page;
@@ -69,7 +69,7 @@ var vm = new Vue({
       this.getData();
     },
     getData:function(){
-          this.$http.get(this.host+'connect.php?section='+this.section).then((response)=>{
+          this.$http.get("http:"+this.host+'connect.php?section='+this.section).then((response)=>{
             console.log(JSON.parse(response.body));
 
             trolldata = JSON.parse(response.body);
