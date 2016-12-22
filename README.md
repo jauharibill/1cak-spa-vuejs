@@ -17,8 +17,8 @@ this project is fully just for fun, its built by clientside web programming (jav
 
 * run php web server
 
-      php -S localhost:8080  
+        php -S localhost:8080  
 
 * open browser
 
-      open in browser http://localhost:8080
+        open in browser http://localhost:8080
