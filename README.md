@@ -11,7 +11,7 @@ this project is fully just for fun, its built by clientside web programming (jav
 
 * go inside project folder
 
-       cd [name of repository]  
+        cd [name of repository]  
 
 ## How to run  
 
