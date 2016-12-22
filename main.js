@@ -7,7 +7,7 @@ var vm = new Vue({
       next:"",
       busy:true,
       keyword:"",
-      host:"http://bill.hol.es/project/1cak/", //this belongs your host
+      host:"//bill.hol.es/project/1cak/", //this belongs your host
   },
   beforeCompile: function () {
     this.load = true;
